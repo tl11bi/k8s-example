@@ -34,4 +34,20 @@ $ docker inspect -f '{{ .Config.Hostname }}' my-container
 6095273a4e9b
 ```
 
+## Concentrated commands
+docker build -t connorli0/connor-test:1.4 .
+docker push connorli0/connor-test:latest
+- ```docker build -t connorli0/connor-test:1.4 .``` for building the image with tag 1.4
+- ```docker push connorli0/connor-test:latest``` for pushing the image to docker hub
+- ```docker run -d -p 8080:8080 connorli0/connor-test:latest``` for running the image on port 8080
+- ```docker ps``` for checking the running containers
+- ```docker stop <container id>``` for stopping the container
+- ```docker rm <container id>``` for removing the container
+- ```docker rmi <image id>``` for removing the image
+- ```docker images``` for checking the images
+- ```docker pull <image name>``` for pulling the image from docker hub
+- ```docker exec -it <container id> /bin/bash``` for entering the container
+- ```docker logs <container id>``` for checking the logs of the container
+- ```docker inspect <container id>``` for checking the container details
+
 
